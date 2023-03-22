@@ -186,7 +186,7 @@ impl Field {
             }
         }
     }
-    fn render(&self, dest: String) {
+    fn render(&self, _dest: String) {
         let mut img = image::RgbImage::new(self.width, self.height);
         for x in 0..self.width {
             for y in 0..self.height {
