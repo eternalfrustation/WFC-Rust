@@ -364,8 +364,7 @@ fn main() {
     let img = image::open("test.png").unwrap();
     let (sample_grid, tiles) = generate_tiles(&img, 1, 1).unwrap();
     let (rules, weights) = generate_rules(&sample_grid);
-    println!("{:?}", rules);
-    let mut grid = Grid::new(20, 20, tiles.len());
+    let mut grid = Grid::new(100, 100, tiles.len());
     let mut max_idx = 0;
     for i in 0..weights.len() {
         if weights[max_idx] < weights[i] {
